@@ -2,86 +2,21 @@
 **Kisi-Kisi UTS Flutter**
 **1. Stateless widget**: widget yang nilai statenya tidak dapat berubah (immutable) maka widget tersebut lebih bersifat statis dan memiliki interaksi yang terbatas. Cocok untuk elemen UI yang statis, seperti teks, ikon, atau gambar yang tidak perlu berubah.
 contoh:
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+![image](https://github.com/user-attachments/assets/dc1ad633-9f0f-42b9-b69d-61e9adddb1f9)
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Flutter Demo",
-      theme: ThemeData(primarySwatch: Colors.blue,
-      ),
-      home: const Scaffold(
-        body: Center(
-          child: BiggerText(text: "Hello, World!"),
-          ),
-          ),
-    );
-  }
-}
 **2.Stateful widget**: widget yang state-nya dapat berubah-ubah nilainya, yg berarti statefulWidget bersifat dinamis dan memmiliki interaksi yang tak terbatas. nCocok untuk elemen UI yang interaktif atau dinamis, seperti tombol yang dapat mengubah teks, slider, form, atau elemen yang datanya berubah selama aplikasi berjalan.
 contoh: 
-class BiggerText extends StatefulWidget {
-  final String text;
-  const BiggerText({super.key, required this.text});
-
-  @override
-  _BiggerTextState createState() => _BiggerTextState();
-}
-
-class _BiggerTextState extends State<BiggerText>{
-  double _textSize = 16.0;
-
-  @override
-
-  Widget build(BuildContext context){
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(widget.text, style: TextStyle(fontSize: _textSize)),
-        ElevatedButton(
-          child: const Text("Perbesar"),
-          onPressed: () {
-            setState(() {
-              _textSize = 32.0;
-            });
-          },
-        )
-      ],
-    );
-  }
-}
+![image](https://github.com/user-attachments/assets/addb030a-6c6b-4583-89e0-67f44fbd3679)
 
 **3. Scaffold** adalah widget yang membentuk struktur dasar sebuah halaman aplikasi Flutter. Di dalamnya, kamu bisa menambahkan elemen-elemen seperti AppBar, Body, dan FloatingActionButton.
 contoh: 
-home: Scaffold(
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                // Gambar Cover MDP
-                Image.asset('images/cover_mdp.jpg'),
-                // Judul
-                Container(
-                  margin: const EdgeInsets.only(top: 16.0),
-                  child: const Text(
-                    'Universitas MDP',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 30.0,
-                        fontFamily: 'Staatliches',
-                        fontWeight: FontWeight.w300),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
+![image](https://github.com/user-attachments/assets/5e4ef50b-85f4-4d3a-8079-295cf59d5e53)
+![image](https://github.com/user-attachments/assets/bc459926-a43d-4fa8-ad1b-a2691388aabd)
+![image](https://github.com/user-attachments/assets/0a9725b4-476f-4786-9f83-682065d44e59)
+![image](https://github.com/user-attachments/assets/62ec3708-6c1a-4a25-ae8c-668a8bc19557)
+![image](https://github.com/user-attachments/assets/cfa242eb-9955-45cb-9751-0fb780c092bc)
+![image](https://github.com/user-attachments/assets/56c9fdc9-ddbf-4c8d-b1c9-5a5117f5d89f)
+
 contoh lain: 
 Scaffold(
   appBar: AppBar(
@@ -97,28 +32,6 @@ Scaffold(
 );
 
 **4. Container** adalah widget serba guna yang bisa digunakan untuk menampilkan elemen UI dengan ukuran, margin, padding, dan warna yang dapat diatur.
-contoh:
-Container(
-                  margin: const EdgeInsets.only(top: 16.0),
-                  child: const Text(
-                    'Universitas MDP',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 30.0,
-                        fontFamily: 'Staatliches',
-                        fontWeight: FontWeight.w300),
-                  ),
-                ),
-                 
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
 **5. Column** adalah widget untuk menata elemen secara vertikal (dari atas ke bawah).
 contoh:
 Column(
