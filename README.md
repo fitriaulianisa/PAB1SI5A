@@ -60,7 +60,7 @@ Image.network('https://album.mdp.ac.id/albums/userpics/10001/Pelatihan-SLIMS_282
 dari lokal:
 Image.asset('images/cover_mdp.jpg'),
 
-**9.Navigator** adalah widget yang membantu dalam menavigasi antar halaman atau layar di dalam aplikasi. 
+**9.Navigator** adalah widget yang membantu dalam menavigasi antar halaman atau layar di dalam aplikasi. berpindah dari satu screen ke screen yg lain.
 Operasi Navigator Utama
 - push: Menambahkan halaman baru ke atas tumpukan dan menampilkannya.
 - pop: Menghapus halaman teratas dari tumpukan dan kembali ke halaman sebelumnya.
@@ -73,3 +73,6 @@ MaterialPageRoute(builder: (context) => HalamanBaru()),
 
 3. Tampil ke halaman sebelumnya:
 Navigator.pop(context);
+![image](https://github.com/user-attachments/assets/07ee5269-7270-4dc8-9317-87b133fa74f3)
+![image](https://github.com/user-attachments/assets/d927e4fa-ffba-4b47-a1ce-d4a3da1e3bbc)
+
